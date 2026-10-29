@@ -1,17 +1,17 @@
 # Real-Time System Telemetry Pipeline
 
-Système de télémétrie en temps réel en C++17 simulant un environnement embarqué. Le projet repose sur une architecture modulaire avec un processus producteur de métriques, un consommateur affichant un tableau de bord dynamique (TUI), et une communication inter-processus via un pipe Unix.
+A real-time system telemetry pipeline in C++17 simulating an embedded environment. The project relies on a modular architecture featuring a metric producer process, a consumer displaying a dynamic terminal user interface (TUI), and inter-process communication (IPC) via an anonymous Unix pipe.
 
-## Fonctionnalités
-- **Producteur (`producer`) :** Génération continue de métriques système (CPU, RAM, température, statuts) sérialisées au format CSV.
-- **Consommateur (`consumer`) :** Affichage d'un tableau de bord interactif dans le terminal.
-- **TUI & Historique :** Barres de progression, suivi des pics maximaux, mini-graphe d'historique ASCII (*sparkline*) et alertes en couleur ANSI.
+## Features
+- **Producer (`producer`):** Continuous generation of system metrics (CPU, RAM, temperature, status flags) serialized into CSV format.
+- **Consumer (`consumer`):** Interactive dashboard rendering directly in the terminal.
+- **TUI & Metrics Tracking:** Dynamic progress bars, peak value indicators, ASCII history graph (*sparkline*), and ANSI color-coded status alerts.
 
 ---
 
-## Compilation
+## Build Instructions
 
-À la racine du projet :
+At the root of the project repository:
 
 ```bash
 mkdir build && cd build
@@ -19,14 +19,14 @@ cmake ..
 make
 ```
 
-## Utilisation 
+## Usage
 
-Lancez le pipeline en connectant le producteur au consommateur via un pipe :
+Run the pipeline by connecting the producer stream to the consumer via a Unix pipe:
 
 ```bash
 ./producer/producer | ./consumer/consumer
 ```
 
-### Aperçu du rendu
+### Preview
 
 <img width="300" height="198" alt="Capture d’écran 2026-10-29 à 05 08 38" src="https://github.com/user-attachments/assets/77b54151-2fc7-44fb-b1b0-d18a63107e09" />
