@@ -28,3 +28,5 @@ Lancez le pipeline en connectant le producteur au consommateur via un pipe :
 ```
 
 ### Aperçu du rendu
+
+<img width="300" height="198" alt="Capture d’écran 2026-10-29 à 05 08 38" src="https://github.com/user-attachments/assets/77b54151-2fc7-44fb-b1b0-d18a63107e09" />
